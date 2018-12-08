@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+  }
+
+.cadetBlue {
+    background-color: cadetblue;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.navButton {
+    height: 40px;
+    width: 40px;
+    margin: 10px 4px;
+}
+
+.selectedButton {
+    border: solid black 2px;
+    background-color: grey;
+    color: white;
+}
+
+.unselectedButton {
+    border: solid white 2px;
+    background-color: black;
+    color: white;
+}
+
+.unselectedButton:hover {
+    border: solid black 2px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.unselectedButton:active {
+    border: solid black 2px;
+    background-color: grey;
+    color: white;
+}

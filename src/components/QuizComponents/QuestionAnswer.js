@@ -3,7 +3,9 @@ import React from 'react';
 const questionAnswer = (props) => {
     return (
         <button children={props.answerChild} 
-        key={props.key} />
+        key={props.id}
+        className={props.class}
+        onClick={props.click} />
     );
 }
 

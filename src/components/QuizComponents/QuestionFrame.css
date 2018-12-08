@@ -1,0 +1,62 @@
+.cadetBlue {
+    background-color: cadetblue;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.questionPadding {
+    max-height: 700px;
+    padding: 5%;
+    margin: 10px;
+}
+
+.selectedButton {
+    border: solid black 2px;
+    background-color: grey;
+    color: white;
+}
+
+.unselectedButton {
+    border: solid white 2px;
+    background-color: black;
+    color: white;
+}
+
+.unselectedButton:hover {
+    border: solid black 2px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.unselectedButton:active {
+    border: solid black 2px;
+    background-color: grey;
+    color: white;
+}
+
+.answerButton {
+    flex-basis: 40%;
+    padding: 1em 0;
+    min-height: 2em;
+    min-width: 20%;
+    align-content: stretch;
+}
+
+.questionImageContainer {
+    padding: 5px;
+    background-color: white;
+    flex-direction: row;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+}

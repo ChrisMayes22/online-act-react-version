@@ -1,5 +1,134 @@
 .App {
   text-align: center;
   background-color: dimgrey;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.container{
+  display: flex;
+  justify-content: space-around;
 }
 
+.cadetBlue {
+  background-color: cadetblue;
+}
+
+.emptyContainer {
+  flex-basis: 10%;
+  height: 20px;
+  background-color: dimgrey;
+  border: dimgrey
+}
+
+.col {
+  flex-direction: column;
+}
+
+.navRow {
+  flex-direction: row;
+  padding: 4%;
+}
+
+.questionPadding {
+  max-height: 700px;
+  padding: 5%;
+  margin: 10px;
+}
+
+.sidebarPadding {
+  padding: 5%;
+  margin: 10px;
+}
+
+.navPadding {
+  padding: 0 10px;
+}
+
+.submitPadding {
+  padding: 15%;
+}
+
+.unselectedButton {
+  border: solid white 2px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.unselectedButton:hover {
+  border: solid black 2px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.unselectedButton:active {
+  border: solid black 2px;
+  background-color: grey;
+  color: white;
+}
+
+.selectedButton {
+  border: solid black 2px;
+  background-color: grey;
+  color: white;
+}
+
+.unselectedButton {
+  border: solid white 2px;
+  background-color: black;
+  color: white;
+}
+
+.unselectedButton:hover {
+  border: solid black 2px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.unselectedButton:active {
+  border: solid black 2px;
+  background-color: grey;
+  color: white;
+}
+
+.answerButton {
+  flex-basis: 40%;
+  padding: 1em 0;
+  min-height: 2em;
+  min-width: 20%;
+  align-content: stretch;
+}
+
+.navButton {
+  height: 40px;
+  width: 40px;
+  margin: 10px 4px;
+}
+
+.selectedButton {
+  border: solid black 2px;
+  background-color: grey;
+  color: white;
+}
+
+.unselectedButton {
+  border: solid white 2px;
+  background-color: black;
+  color: white;
+}
+
+.unselectedButton:hover {
+  border: solid black 2px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.unselectedButton:active {
+  border: solid black 2px;
+  background-color: grey;
+  color: white;
+}
