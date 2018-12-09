@@ -3,6 +3,7 @@ import classes from './App.css';
 import QuestionFrame from '../components/QuizComponents/QuestionFrame';
 import Timer from '../components/Sidebar/Timer';
 import NavBar from '../components/Sidebar/NavBar';
+import FeedbackBox from '../components/Feedback/FeedbackBox';
 import CubeProblem from '../assets/images/cube-problem.jpg';
 import LogarithmProblem from '../assets/images/logarithm-problem.jpg';
 import MLessThanN from '../assets/images/m-less-than-n.jpg';
@@ -20,7 +21,7 @@ class App extends Component {
             id: 'q1.1',
             ordinal: 1,
             imageUrl: ThirdsQuestion, 
-            rightAnsw: 'e) 81',
+            rightAnswer: 'e) 81',
             answers: [
                 {value: 'a) 12', id: '1.1a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.1'}, 
@@ -32,13 +33,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.1'}, 
                 {value: 'e) 81', id: '1.1e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.1'}],
-            style: [classes.selectedButton, classes.navButton]
+            style: [classes.selectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties',
         },
         minutes: '15',
         seconds: '00',
         userAnswers: [],
-        displayQuiz: true,
-        displayIntro: false,
+        displayIntro: true,
+        displayQuiz: false,
         displayResults: false
     }
 
@@ -47,7 +50,7 @@ class App extends Component {
             id: 'q1.1',
             ordinal: 1,
             imageUrl: ThirdsQuestion, 
-            rightAnsw: 'e) 81',
+            rightAnswer: 'e) 81',
             answers: [
                 {value: 'a) 12', id: '1.1a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.1'}, 
@@ -59,13 +62,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.1'}, 
                 {value: 'e) 81', id: '1.1e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.1'}],
-            style: [classes.selectedButton, classes.navButton]
+            style: [classes.selectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.2',
             ordinal: 2,
             imageUrl: MLessThanN, 
-            rightAnsw: 'd) n^2 - m^2 is odd',
+            rightAnswer: 'd) n^2 - m^2 is odd',
             answers: [
                 {value: 'a) m is odd', id: '1.2a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.2'}, 
@@ -77,13 +82,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.2'}, 
                 {value: 'm^2 + n^2 is even', id: '1.2e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.2'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.3',
             ordinal: 3,
             imageUrl: GraphProblem, 
-            rightAnsw: 'd) IV',
+            rightAnswer: 'd) IV',
             answers: [
                 {value: 'a) I', id: '1.3a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.3'}, 
@@ -95,13 +102,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.3'}, 
                 {value: 'e) V', id: '1.3e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.3'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.4',
             ordinal: 4,
             imageUrl: TriangleProblem, 
-            rightAnsw: 'e) 2(y + z)',
+            rightAnswer: 'e) 2(y + z)',
             answers: [
                 {value: 'a) 2(y + z) + x', id: '1.4a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.4'}, 
@@ -113,13 +122,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.4'}, 
                 {value: 'e) 2(y + z)', id: '1.4e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.4'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.5',
             ordinal: 5,
             imageUrl: TrigProblem, 
-            rightAnsw: 'b) 0 < a2 < a1',
+            rightAnswer: 'b) 0 < a2 < a1',
             answers: [
                 {value: 'a) 0 < a1 < a2', id: '1.5a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.5'}, 
@@ -131,13 +142,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.5'}, 
                 {value: 'e) a2 < a1 < 0', id: '1.5e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.5'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.6',
             ordinal: 6,
             imageUrl: TrigIdentities, 
-            rightAnsw: 'c) 2',
+            rightAnswer: 'c) 2',
             answers: [
                 {value: 'a) 0', id: '1.6a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.6'}, 
@@ -149,13 +162,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.6'}, 
                 {value: 'e) sin(2x)', id: '1.6e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.6'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.7',
             ordinal: 7,
             imageUrl: ValueOfB, 
-            rightAnsw: 'a) 9',
+            rightAnswer: 'a) 9',
             answers: [
                 {value: 'a) 9', id: '1.7a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.7'}, 
@@ -167,13 +182,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.7'}, 
                 {value: 'e) 4 - 7sqrt(6)', id: '1.7e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.7'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.8',
             ordinal: 8,
             imageUrl: LogarithmProblem, 
-            rightAnsw: 'd) 125',
+            rightAnswer: 'd) 125',
             answers: [
                 {value: 'a) 3', id: '1.8a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.8'}, 
@@ -185,13 +202,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.8'}, 
                 {value: 'e) 243', id: '1.8e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.8'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.9',
             ordinal: 9,
             imageUrl: PentagonQuadrilateral, 
-            rightAnsw: 'c) 36',
+            rightAnswer: 'c) 36',
             answers: [
                 {value: 'a) 18', id: '1.9a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.9'}, 
@@ -203,13 +222,15 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.9'}, 
                 {value: 'e) 72', id: '1.9e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.9'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         },
         {
             id: 'q1.10',
             ordinal: 10,
             imageUrl: CubeProblem, 
-            rightAnsw: 'e) 54',
+            rightAnswer: 'e) 54',
             answers: [
                 {value: 'a) 9', id: '1.10a', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.10'}, 
@@ -221,7 +242,9 @@ class App extends Component {
                     classes.answerButton], questionId: 'q1.10'}, 
                 {value: 'e) 54', id: '1.10e', style: [classes.unselectedButton, 
                     classes.answerButton], questionId: 'q1.10'}],
-            style: [classes.unselectedButton, classes.navButton]
+            style: [classes.unselectedButton, classes.navButton],
+            checkCorrect: false,
+            reviewUrl: 'https://www.ixl.com/math/algebra-2/simplify-variable-expressions-using-properties'
         }
     ]
 
@@ -259,6 +282,15 @@ class App extends Component {
 
 /// *###### NAVIGATION ######*
 
+    startQuiz = () => {
+        this.timerUpdateHandler();
+        this.setState ({
+            displayIntro: false,
+            displayQuiz: true,
+            displayResults: false
+        })
+    }
+
     changeQuestionHandler = (id) => {
         const targetQuestion = this.questions.find(
             (p) => p.id === id
@@ -277,12 +309,37 @@ class App extends Component {
             (p) => p.id === id
         );
 
-        this.questions[targetQuestion].style = [classes.selectedButton, classes.navButton];
+        this.questions[targetQuestion].style = 
+        [classes.selectedButton, classes.navButton];
     }
 
     questionNavigation = (id) => {
         this.changeQuestionHandler(id);
         this.navStyleHandler(id);
+    }
+
+    checkCorrectHandler = () => {
+        for(var i=0; i<this.questions.length; i++){
+            if(this.questions[i].rightAnswer === this.state.userAnswers[i]){
+                this.questions[i].checkCorrect = true;
+            }
+        }
+    }
+
+    displayFeedbackHandler = () => {
+        this.setState ({
+            displayIntro: false,
+            displayQuiz: false,
+            displayResults: true
+        })
+    }
+
+    finishQuiz = () => {
+        var confirmDone = window.confirm('Are you sure you want to submit your answers?');
+        if(confirmDone){
+            this.checkCorrectHandler();
+            this.displayFeedbackHandler();
+        }
     }
 
 /// *###### ANSWER HANDLING ######*
@@ -315,8 +372,8 @@ class App extends Component {
                 = [classes.unselectedButton, classes.answerButton];
         }
 
-        this.questions[targetQuestion].answers[targetAnswer].style = [classes.selectedButton, 
-            classes.answerButton];
+        this.questions[targetQuestion].answers[targetAnswer].style = 
+        [classes.selectedButton, classes.answerButton];
 
         this.setState({
             question: this.questions[targetQuestion]
@@ -331,6 +388,21 @@ class App extends Component {
     render() {
 
         let quizScreen  = null;
+        let introScreen = null;
+        let feedbackScreen = null;
+
+        if(this.state.displayIntro) {
+            introScreen = (
+                <div className = {[classes.container,
+                    classes.cadetBlue,
+                    classes.col,
+                    classes.startPadding].join(' ')}>
+                    <p children='You will have fifteen minutes to complete ten questions drawn from a real ACT exam. 
+                        Press begin when you are ready to start.' />
+                    <button className={classes.unselectedButton} onClick={this.startQuiz} children = 'Begin' />
+                </div>
+            )
+        }
 
         if(this.state.displayQuiz) {
             quizScreen = ( 
@@ -373,15 +445,25 @@ class App extends Component {
                             classes.col,
                             classes.submitPadding].join(' ')}>
                             <button children='SUBMIT ANSWERS'
-                            className={classes.unselectedButton} />
+                            className={classes.unselectedButton}
+                            onClick={this.finishQuiz} />
                         </div>
                     </div>
                 </div>
             );
         }
+
+        if(this.state.displayResults){
+            feedbackScreen = (
+                <FeedbackBox questions={this.questions}/>
+            );
+        }
+
         return (
             <div>
+                {introScreen}
                 {quizScreen}
+                {feedbackScreen}
             </div>
         )
     }

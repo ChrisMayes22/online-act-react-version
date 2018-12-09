@@ -1,0 +1,44 @@
+.paddingLeft {
+    max-height: 400px;
+    max-width: 400px;
+    padding: 15%;
+    margin: 0 10% 0 auto;
+}
+
+.paddingRight {
+    max-height: 400px;
+    max-width: 400px;
+    padding: 15%;
+    margin: 0 auto 0 10%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+  
+.cadetBlue {
+    background-color: cadetblue;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
